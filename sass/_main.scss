@@ -1,0 +1,288 @@
+// Normally mainpage styles
+@mixin ro($w: 400){
+	font-family: 'Roboto', sans-serif;
+	font-weight: $w;
+}
+.contenttop{
+	height: 230px - 8px;
+	background: #3E4046;
+	padding: 8px 15px 0 15px;
+	border-bottom: 3px solid #54565D;
+}
+.content{
+	padding: 15px;
+}
+.icon-ready{
+	@include s(ready);
+}
+.icon-processing{
+	@include s(processing);
+}
+.icon-uploading{
+	@include s(uploading);
+}
+.videos{
+	font-size: 0;
+	.videos__header{
+		margin-bottom: 11px;
+		h2{
+			font-size: 32px;
+			@include ro(100);
+			color: #f0f1f3;
+			display: inline-block;
+			margin-right: 12px;
+		}
+		nav{
+			display: inline-block;
+			font-size: 16px;
+			color: #777c89;
+			@include ro(700);
+			font-size: 0;
+			a{
+				color: #777c89;
+				text-decoration: none;
+				padding-right: 15px;
+				margin-right: 9px;
+				font-size: 16px;
+				position: relative;
+				&:before{
+					content: ' ';
+					position: absolute;
+					right: 0;
+					bottom: 2px;
+					border-right: 1px solid #4F525A;
+					height: 15px;
+				}
+			}
+			i{
+				display: inline-block;
+				margin-right: 8px;
+			}
+		}
+		.videos__uploaded{
+			i{
+				@include s(uploading);
+			}
+		}
+		.videos__ready{
+			&:before{
+				display: none;
+			}
+			i{
+				@include s(ready);
+			}
+		}
+		.videos__processing{
+			i{
+				@include s(processing);
+				position: relative;
+				top: 1px;
+			}
+		}
+	}
+	.videos__scroll{
+		overflow: hidden;
+		height: 185px;
+		padding-top: 8px;
+		overflow-y: hidden;
+		overflow-x: auto;
+		white-space: nowrap;
+		.video{
+			margin-bottom: 100px;
+		}
+	}
+}
+.video{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 15px;
+	font-size: 16px;
+	@include ro(400);
+	cursor: pointer;
+	margin-bottom: 15px;
+	.video__pic{
+		position: relative;
+		z-index: 2;
+		img{
+			display: block;
+		}
+	}
+	.video__status{
+		height: 3px;
+		background: #777C88;
+		position: relative;
+		z-index: 2;
+		i{
+			display: block;
+			height: 3px;
+			background: #F0F1F3;
+		}
+	}
+	.video__title{
+		font-size: 16px;
+		color: #a7a8ad;
+		font-weight: 400;
+		padding-top: 2px;
+		position: relative;
+		z-index: 2;
+	}
+	.video__textstatus{
+		color: #777c89;
+		font-size: 13px;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 2; 
+		font-weight: 600;
+		i{
+			display: inline-block;
+			margin-right: 3px;
+		}
+	}
+	&.is-uploading{
+		.video__textstatus{
+			i{
+				@include s(uploading);
+			}
+		}
+	}
+	&.is-ready{
+		.video__status{
+			background: #007691;
+			i{
+				display: none;
+			}
+		}
+		.video__textstatus{
+			i{
+				@include s(ready);
+			}
+		}
+	}
+	&.is-processing{
+		.video__status{
+			background: #007691;
+			i{
+				width: 100% !important;
+				background: #F0F1F3;
+			}
+		}
+		.video__textstatus{
+			i{
+				@include s(processing);
+				position: relative;
+				top: 3px;
+			}
+		}
+	}
+	&.is-active{
+		position: relative;
+		&:before{
+			z-index: 1;
+			position: absolute;
+			left: -4px;
+			top: -5px;
+			content: ' ';
+			@include s(videoactive);
+		}
+		.video__pic{
+			box-shadow: 0 0 4px rgba(#000, .6);
+		}
+		.video__title{
+			color: #fff;
+		}
+		.video__textstatus{
+			color: #3e4047;
+		}
+		&.is-ready{
+			.video__textstatus{
+				i{
+					@include s(readyh);
+				}
+			}
+		}
+	}
+}
+
+
+.bvideo{
+	margin: 30px 0 70px 0;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	.bvideo__pic{
+		float: left;
+		margin-right: 15px;
+	}
+	&.is-ready{
+		.bvideo__pic{
+			border-bottom: 3px solid #007691;
+			img{
+				display: block;
+			}
+		}
+	}
+	.bvideo__remove{
+		position: absolute;
+		font-size: 13px;
+		bottom: -2em;
+		left: 0;
+		font-size: 16px;
+		color: #777c89;
+		@include ro(700);
+		cursor: pointer;
+		i{
+			@include s(remove);
+			display: inline-block;
+			margin-right: 6px;
+			vertical-align: middle;
+		}
+	}
+	.bvideo__title{
+		font-size: 40px;
+		@include ro(100);
+		color: #fff;
+	}
+	.bvideo__content{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 554px + 15px;
+		color: #777c89;
+		h3{
+			@include ro(100);
+			font-size: 32px;
+			margin-bottom: 3px;
+		}
+		p{
+			font-size: 13px;
+			line-height: 1.4;
+		}
+	}
+
+}
+.error{
+	background: #3E4046;
+	border-left: 3px solid #FF8870;
+	padding: 10px;
+	@include ro(400);
+	font-size: 13px;
+	color: #a7a8ad;
+	margin: 5px 0;
+	width: 60%;
+	strong{
+		display: block;
+		@include ro(600);
+	}
+}
+.status{
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #fff;
+	@include ro(600);
+	cursor: pointer;
+	i{
+		vertical-align: middle;
+		margin-right: 4px;
+		display: inline-block;
+	}
+}
