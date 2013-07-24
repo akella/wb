@@ -21,6 +21,12 @@
 .icon-uploading{
 	@include s(uploading);
 }
+.icon-processingbig{
+	@include s(processingbig);
+}
+.icon-uploadingbig{
+	@include s(uploadingbig); 	
+}
 .videos{
 	font-size: 0;
 	.videos__header{
@@ -92,6 +98,7 @@
 		}
 	}
 }
+
 .video{
 	display: inline-block;
 	vertical-align: top;
@@ -200,6 +207,54 @@
 				}
 			}
 		}
+		&.is-processing{
+			.video__textstatus{
+				i{
+					@include s(processingh);
+				}
+			}
+		}
+		&.is-uploading{
+			.video__textstatus{
+				i{
+					@include s(uploadingh);
+				}
+			}
+		}
+	}
+	.video__remove{
+		position: absolute;
+		@include s(removesmall);
+		right: 0;
+		top: 4px;
+		cursor: pointer;
+	}
+	&.is-button{
+		width: 179px;
+
+		.video__textstatus{
+			text-transform: none;
+			font-size: 13px;
+			color: #777c89;
+			white-space: normal;
+			padding-top: 3px;
+		}
+		.video__pic{
+			width: 179px;
+			height: 110px;
+			background: #4D4F54;
+			line-height: 110px;
+			text-transform: none;
+			color: #fff;
+			@include ro(600);
+			text-align: center;
+			i{
+				@include s(plus);
+				vertical-align: middle;
+				display: inline-block;
+				margin-right: 13px;
+			}
+		}
 	}
 }
 
@@ -213,9 +268,37 @@
 		float: left;
 		margin-right: 15px;
 	}
+	.bvideo__status{
+		height: 3px;
+		background: #777C88;
+		position: relative;
+		z-index: 2;
+		i{
+			display: block;
+			height: 3px;
+			background: #F0F1F3;
+		}
+	}
+	&.is-ready{
+		.bvideo__status{
+			background: #007691;
+			i{
+				display: none;
+			}
+		}
+	}
+	&.is-processing{
+		.bvideo__status{
+			background: #007691;
+			i{
+				width: 100% !important;
+				background: #F0F1F3;
+			}
+		}
+	}
 	&.is-ready{
 		.bvideo__pic{
-			border-bottom: 3px solid #007691;
+			//border-bottom: 3px solid #007691;
 			img{
 				display: block;
 			}
@@ -235,6 +318,9 @@
 			display: inline-block;
 			margin-right: 6px;
 			vertical-align: middle;
+		}
+		&:hover{
+			color: #fff;
 		}
 	}
 	.bvideo__title{
@@ -280,9 +366,31 @@
 	color: #fff;
 	@include ro(600);
 	cursor: pointer;
+	max-width: 300px;
 	i{
 		vertical-align: middle;
 		margin-right: 4px;
 		display: inline-block;
+	}
+	.is-processing &, .is-uploading &{
+		color: #777c89;
+		i{
+			margin-bottom: 7px;
+		}
+	}
+	.is-uploading &{
+		i{
+			margin-bottom: 0;
+			vertical-align: middle;
+			position: relative;
+			top: 6px;
+			margin-left: 7px;
+			margin-right: 11px;
+		}
+	}
+	strong{
+		@include ro(100);
+		font-size: 64px;
+		vertical-align: middle;
 	}
 }
