@@ -25,7 +25,10 @@
 	@include s(processingbig);
 }
 .icon-uploadingbig{
-	@include s(uploadingbig); 	
+	@include s(uploadingbig);
+}
+.icon-uploadingbig1{
+	@include s(uploadingbig1);
 }
 .videos{
 	font-size: 0;
@@ -90,6 +93,11 @@
 					border-right: 1px solid #4F525A;
 					height: 15px;
 				}
+				&:last-child{
+					&:before{
+						display: none;
+					}
+				}
 			}
 			i{
 				display: inline-block;
@@ -107,9 +115,7 @@
 			}
 		}
 		.videos__ready{
-			&:before{
-				display: none; 
-			}
+			
 			i{
 				@include s(ready);
 			}
