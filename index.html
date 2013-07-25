@@ -20,9 +20,9 @@
 		<div class="videos__header">
 			<h2>Videos</h2>
 			<nav>
-				<a href="#" class="videos__uploaded"><i></i>3</a>
-				<a href="#" class="videos__processing"><i></i>5</a>
-				<a href="#" class="videos__ready"><i></i>6</a>
+				<a href="#" class="videos__uploaded is-active"><i></i>3</a>
+				<a href="#" class="videos__processing is-active"><i></i>5</a>
+				<a href="#" class="videos__ready is-active"><i></i>6</a>
 			</nav>
 		</div>
 		<a href="#" class="videos__add"><i></i>Add a video</a>
@@ -56,7 +56,7 @@
 				</div>
 				<div class="video__status"><i style="width:50%"></i></div>
 				<h3 class="video__title">Getaway</h3>
-				<div class="video__textstatus"><i></i>Ready</div>
+				<div class="video__textstatus"><i></i>Processing</div>
 			</div>
 			<!-- END video-->
 			<!-- BEGIN  video-->
@@ -70,7 +70,7 @@
 			</div>
 			<!-- END video-->
 			<!-- BEGIN  video-->
-			<div class="video is-ready is-active">
+			<div class="video is-ready ">
 				<div class="video__pic">
 					<img src="img/video.png" alt="">
 				</div>
@@ -81,13 +81,13 @@
 			<!-- END video-->
 			
 			<!-- BEGIN  video-->
-			<div class="video is-processing">
+			<div class="video is-processing is-active">
 				<div class="video__pic">
 					<img src="img/video.png" alt="">
 				</div>
 				<div class="video__status"><i style="width:50%"></i></div>
 				<h3 class="video__title">Getaway</h3>
-				<div class="video__textstatus"><i></i>Ready</div>
+				<div class="video__textstatus"><i></i>Processing</div>
 			</div>
 			<!-- END video-->
 			
@@ -98,7 +98,16 @@
 				</div>
 				<div class="video__status"><i style="width:50%"></i></div>
 				<h3 class="video__title">Getaway</h3>
-				<div class="video__textstatus"><i></i>Ready</div>
+				<div class="video__textstatus"><i></i>Processing</div>
+			</div>
+			<!-- END video-->
+			
+			<!-- BEGIN  video-->
+			<div class="video is-button">
+				<div class="video__pic">
+					<i></i>Add a video
+				</div>
+				<div class="video__textstatus">Video is uploaded<br>with degraded quality</div>
 			</div>
 			<!-- END video-->
 		</div>
@@ -125,6 +134,23 @@
 				</div>
 				<div class="status">
 					<i class="icon-ready"></i> Add Files and compile
+				</div>
+			</div>
+			<div class="bvideo__remove"><i></i>remove</div>
+		</div>
+		<!-- END bvideo-->
+		
+		<!-- BEGIN  bvideo-->
+		<div class="bvideo is-ready">
+			<div class="bvideo__pic">
+				<img src="img/bvideo.png" alt="">
+					<div class="bvideo__status"><i style="width:50%"></i></div>
+			</div>
+			<h2 class="bvideo__title">The Dark Knight Rises</h2>
+			<div class="bvideo__content">
+				<h3>Ready</h3>
+				<div class="status">
+					<i class="icon-ready"></i> Compile and download
 				</div>
 			</div>
 			<div class="bvideo__remove"><i></i>remove</div>
@@ -162,7 +188,7 @@
 				
 				<div class="status ">
 					
-					<i class="icon-uploadingbig"></i><strong>5%</strong><br> degradating and uploading
+					<i class="icon-uploadingbig"></i><strong>5%</strong><br> degradating and uploading<br>
 00:15:23.48 / 02:23:00
 				</div>
 			</div>
@@ -181,14 +207,7 @@
 			</nav>
 		</div>
 
-		<!-- BEGIN  video-->
-		<div class="video is-button">
-			<div class="video__pic">
-				<i></i>Add a video
-			</div>
-			<div class="video__textstatus">Video is uploadedwith degraded quality</div>
-		</div>
-		<!-- END video-->
+		
 		<!-- BEGIN  video-->
 		<div class="video is-uploading">
 			<div class="video__pic">
@@ -268,10 +287,11 @@
 		<!-- END video-->
 		
 		<!-- BEGIN  video-->
-		<div class="video">
-			<div class="video__addme">
-				<i></i>
+		<div class="video is-button">
+			<div class="video__pic">
+				<i></i>Add a video
 			</div>
+			<div class="video__textstatus">Video is uploadedwith degraded quality</div>
 		</div>
 		<!-- END video-->
 		
