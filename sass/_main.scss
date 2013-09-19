@@ -15,6 +15,9 @@
 .icon-download{
 	@include s(download);
 }
+.icon-detect{
+	@include s(detect);
+}
 .icon-ready{
 	@include s(ready);
 }
@@ -480,6 +483,7 @@
 	margin-bottom: 50px;
 	margin-top: 20px;
 	min-width: 1000px;
+	overflow: hidden;
 	.doublevideo__col{
 		float: left;
 		width: 49%; 
@@ -540,6 +544,8 @@
 	text-transform: uppercase;
 	font-size: 13px;
 	margin-top: 6px;
+	height: 30px;
+	line-height: 30px;
 	a{
 		color: #fff;
 		text-decoration: none;
@@ -552,3 +558,51 @@
 		top: -2px;
 	}
 }
+.detect{
+	@extend .download;
+	float: left;
+}
+.savethematch{
+	@extend .download;
+	float: right;
+}
+.frames{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 2px;
+	img{
+		display: block;
+	}
+}
+.matchframes{
+	background: #151616;
+	@extend %clr;
+	margin: 0 -15px;
+	clear: both;
+	.matchframe__original, .matchrames__scan{
+		padding: 4px;
+		background: #151616;
+	}
+	.matchframes__scan{
+		background: #3E4046;
+		.frames{
+			opacity: .3;
+		}
+	}
+	.matchframes__header{
+		height: 23px;
+		line-height: 23px;
+		padding-left: 15px;
+		color: #727782;
+		font-size: 15px;
+		text-transform: uppercase;
+		span, strong{
+			margin-right: 16px;
+		}
+		strong{
+			color: #A7A8AD;
+		}
+	}
+}
+
