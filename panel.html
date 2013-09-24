@@ -136,17 +136,17 @@
 			<div class="doublevideo__col">
 				<h3>Restored</h3>
 				<img src="img/bvideo.png" alt="">
-				<div class="detect">
-					<a href='#'><i class="icon-detect"></i>Detect scenes</a>
-				</div>
+				
 				<div class="savethematch">
-					<a href='#'><i class="icon-ready"></i>Save the match</a>
+					<a href='#'><i class="icon-upload"></i>Finish and upload</a>
 				</div>
 			</div>
 			
 		</div>
 		<!-- END doublevideo -->
-
+		<div class="vstatus">
+			
+		</div>
 		<!-- BEGIN matchframes -->
 		<div class="matchframes">
 			<div class="matchframes__header">
@@ -154,17 +154,30 @@
 				<span>STD 00:00:01:53</span>
 				<span>TAPE 00:00:01:53</span>
 				<span>FRAME 213541</span>
+				<div class="matchframes__scrollocked">
+					<i class="icon-locked"></i>Scroll locked
+				</div>
 			</div>
 			<!-- BEGIN matchframes__original -->
 			<div class="matchframes__original">
-				<div class="frames">
-					<img src="img/frames.png" alt="">
-				</div>
-				<div class="frames">
-					<img src="img/frames.png" alt="">
+				
+				<div class="frames__wrap">
+					<div class="matchframes__matched" style="left:40%;width:200px"></div>
+					<div class="frames">
+						<div class="matchframes__overlayed" style="width:40%"></div>
+						<div class="matchframes__proceeded" style="width: 40%;"></div>
+						<img src="img/frames.png" alt="">
+					</div>
+					<div class="frames">
+						<div class="matchframes__proceeded" style="width: 20%;"></div>
+						<img src="img/frames.png" alt="">
+					</div>
 				</div>
 			</div>
 			<!-- END matchframes__original -->
+			<div class="savethematch">
+					<a href='#'><i class="icon-ready"></i>Save the match</a>
+			</div>
 			<div class="matchframes__header">
 				<strong>SCAN</strong>
 				<span>STD 00:00:01:53</span>
@@ -173,15 +186,13 @@
 			</div>
 			<!-- BEGIN matchframes__scan -->
 			<div class="matchframes__scan">
-				<div class="frames">
-					<img src="img/frames.png" alt="">
+				<div class="detect">
+					<a href='#'><i class="icon-detect"></i>Show all matching scans</a>
 				</div>
 				<div class="frames">
 					<img src="img/frames.png" alt="">
 				</div>
-				<div class="frames">
-					<img src="img/frames.png" alt="">
-				</div>
+				<div class="matchframes__logo"></div>
 			</div>
 			<!-- END matchframes__scan -->
 		</div>

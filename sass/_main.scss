@@ -15,11 +15,17 @@
 .icon-download{
 	@include s(download);
 }
+.icon-locked{
+	@include s(locked);
+}
 .icon-detect{
 	@include s(detect);
 }
 .icon-ready{
 	@include s(ready);
+}
+.icon-upload{
+	@include s(uploadicon);
 }
 .icon-processing{
 	@include s(processing);
@@ -580,14 +586,31 @@
 	@extend %clr;
 	margin: 0 -15px;
 	clear: both;
+	.savethematch{
+		margin-right: 20px;
+	}
 	.matchframe__original, .matchrames__scan{
 		padding: 4px;
 		background: #151616;
 	}
 	.matchframes__scan{
 		background: #3E4046;
+		padding-bottom: 65px;
+		border-top: 1px solid #54565D;
+		margin-top: 14px;
+		position: relative;
+		overflow: hidden;
 		.frames{
 			opacity: .3;
+		}
+		.matchframes__logo{
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			@include s(mlogo);
+		}
+		.detect{
+			margin: 5px 0 6px 15px;
 		}
 	}
 	.matchframes__header{
@@ -604,5 +627,53 @@
 			color: #A7A8AD;
 		}
 	}
+	.matchframes__scrollocked{
+		font-size: 13px;
+		text-transform: uppercase;
+		color: #777c89;
+		display: inline-block;
+		font-weight: bold;
+		position: absolute;
+		right: 20px;
+		i{
+			display: inline-block;
+			margin-right: 5px;
+			vertical-align: middle;
+			position: relative;
+			top: -2px;
+		}
+	}
+}
+.frames__wrap{
+	position: relative;
+}
+.matchframes__overlayed{
+	height: 100%;
+	position: absolute;
+	background: rgba(#fff, .4);
+	z-index: 200;
+}
+.matchframes__matched{
+	height: 100%;
+	position: absolute;
+	z-index: 2000;
+	top: 0;
+	box-shadow:0 0 0px 3px #fff;
+}
+.matchframes__proceeded{
+	bottom: 10px;
+	height: 2px;
+	background: #FDCC56;
+	left: 0;
+	position: absolute;
+	border-bottom: 1px solid #FEEAB7;
+	border-top: 1px solid rgba(#000, .7);
+	z-index: 300;
 }
 
+.vstatus{
+	height: 15px;
+	background: #F78870;
+	margin: 0 -15px 4px -15px;
+	box-shadow: 0 0 6px rgba(#F78870, .7);
+}
