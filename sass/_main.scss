@@ -554,12 +554,13 @@
 	}
 }
 .download{
-	@include ro(600);
 	text-transform: uppercase;
 	font-size: 13px;
 	margin-top: 6px;
 	height: 30px;
 	line-height: 30px;
+	@include bold;
+	font-weight: normal;
 	a{
 		color: #fff;
 		text-decoration: none;
@@ -616,10 +617,17 @@
 		line-height: 23px;
 		padding-left: 15px;
 		color: #727782;
-		font-size: 15px;
+		font-size: 13px;
 		text-transform: uppercase;
+		@include bold;
 		span, strong{
 			margin-right: 16px;
+			font-weight: normal;
+		}
+		small{
+			@include reg;
+			font-size: 13px;
+			margin-right: 2px;
 		}
 		strong{
 			color: #A7A8AD;
@@ -711,6 +719,7 @@
 		background: rgba(#000, .3);
 		z-index: 100;
 		padding-right: 10px;
+		@include reg;
 	}
 	&:hover{
 		.frames__title{
@@ -814,6 +823,7 @@
 		@include transition(all .2s ease-in-out);
 		overflow: hidden;
 		cursor: pointer;
+
 		i{
 			@include s(sright);
 			position: absolute;
@@ -854,6 +864,7 @@
 		left: -3px;
 		right: -3px;
 		padding-left: 3px;
+		@include bold;
 		i{
 			@include s(usethisscan);
 			display: inline-block;

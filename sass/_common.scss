@@ -39,7 +39,32 @@
 // .🍺{beer:everything}
 
 //*{-webkit-transition: .3s all;}
+@mixin font($alias, $name){
+	@font-face{
+		font-family: $alias;
+		src: url('fonts/'+$name+'.eot');
+		src: url("fonts/"+$name+".eot?#iefix") format("embedded-opentype"), url("fonts/"+$name+".woff") format("woff"), url("fonts/"+$name+".ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+}
 
+@include font(robold, Roboto-Bold);
+@include font(romed, Roboto-Medium);
+@include font(rocond, Roboto-Condensed);
+@include font(roreg, Roboto-Regular);
+@mixin reg{
+	font-family: "roreg",sans-serif;
+}
+@mixin med{
+	font-family: "romed",sans-serif;
+}
+@mixin cond{
+	font-family: "rocond",sans-serif;
+}
+@mixin bold{
+	font-family: "robold",sans-serif;
+}
 *{margin:0;padding:0; }
 @include iphone{*{-webkit-text-size-adjust: none;}}
 button::-moz-focus-inner { padding: 0; border: 0 }
