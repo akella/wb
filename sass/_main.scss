@@ -26,6 +26,9 @@
 .icon-detect{
 	@include s(detect);
 }
+.icon-check{
+	@include s(check);
+}
 .icon-ready{
 	@include s(ready);
 }
@@ -658,7 +661,7 @@
 	height: 15px;
 	background: #000;
 	margin: 0 -15px 4px -15px;
-	
+	position: relative;
 	.vstatus__range{
 		background: #777C88;
 		box-shadow: 0 0 6px rgba(#777C88, .7);
