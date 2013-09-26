@@ -229,9 +229,11 @@ a img, fieldset { border: none; }
 .listvideos h2 span { font-family: 'Roboto', sans-serif; font-weight: 600; font-size: 13px; color: #6F737F; text-transform: uppercase; margin-left: 10px; }
 
 .videoitem { margin-bottom: 40px; display: inline-block; width: 100%; }
+.videoitem.is-new .videoitem__pic img { border-bottom-color: #fff; }
 .videoitem .videoitem__pic { margin-right: 15px; float: left; }
 .videoitem .videoitem__pic img { border-bottom: 3px solid #777C88; }
 .videoitem .videoitem__meta { font-size: 13px; color: #777c89; font-weight: normal; }
+.videoitem .videoitem__meta strong { font-family: 'Roboto', sans-serif; font-weight: 600; color: #fff; text-transform: uppercase; }
 .videoitem .videoitem__title { font-size: 16px; color: #a7a8ad; font-weight: normal; font-family: 'Roboto', sans-serif; font-weight: 600; text-decoration: none; }
 .videoitem .videoitem__title a { color: #a7a8ad; text-decoration: none; }
 .videoitem .videoitem__title b { display: block; margin-top: 0px; font-size: 13px; color: #777c89; font-weight: normal; text-transform: uppercase; }

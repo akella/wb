@@ -19,6 +19,13 @@
 	margin-bottom: 40px;
 	display: inline-block;
 	width: 100%;
+	&.is-new{
+		.videoitem__pic{
+			img{
+				border-bottom-color: #fff;
+			}
+		}
+	}
 	.videoitem__pic{
 		margin-right: 15px;
 		float: left;
@@ -31,6 +38,11 @@
 		color: #777c89;
 		font-weight: normal;
 		//margin-bottom: 4px;
+		strong{
+			@include ro(600);
+			color: #fff;
+			text-transform: uppercase;
+		}
 	}
 	.videoitem__title{
 		font-size: 16px;
