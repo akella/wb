@@ -1,0 +1,108 @@
+.b-eagleeye{
+	background: #19191D;
+}
+.fixme{
+	padding-top: 20px;
+	padding-bottom: 10px;
+	z-index: 100;
+	.doublevideo{
+		margin-top: 0;
+		margin: -40px -15px 0px -15px;
+		padding: 40px 15px 5px 15px;
+		background: #19191D;
+	}
+	.videos__header{
+		background: #292A31;
+		padding-top: 20px;
+		margin-bottom: 0;
+		padding-bottom: 11px;
+		margin-left: -15px;
+		padding-left: 15px;
+	}
+}
+.downloadedl{
+	@extend .download;
+}
+.zoomfilmstrip{
+	float: right;
+	color: #777C88;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-top: 20px;
+	
+	*{
+		vertical-align: middle;
+		display: inline-block;
+	}
+	strong{
+		margin-left: 10px;
+	}
+	.zoomfilmstrip__plus{
+		@include s(smallplus);
+		position: relative;
+		top: -2px;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+	.zoomfilmstrip__minus{
+		@include s(minus);
+		position: relative;
+		top: -1px;
+		margin-right: 10px;
+		cursor: pointer;
+	}	
+}
+
+.eagle-filmstrip{
+	height: 30px;
+	margin: 0 -15px 1px -15px;
+}
+.scans{
+	margin: 0 -15px;
+}
+.scan{
+	padding: 2px 0;
+	border-bottom: 1px solid #101114;
+	position: relative;
+	.scan__img{
+		height: 30px;
+		display: block;
+		position: relative;
+		img{
+			opacity: .2;
+			position: absolute;
+		}
+		.mask{
+			opacity: 1;
+			z-index: 1;
+		}
+	}
+	.scan__title{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		font-size: 13px;
+		color: #a7a8ad;
+		display: inline-block;
+		background: #19191B;
+		padding: 2px 2px 2px 4px;
+		line-height: 1;
+		opacity: 0;
+		left: -10px;
+		@include transition(all .1s ease-in-out);
+	}
+	&:hover{
+		.scan__title{
+			opacity: 1;
+			left: 0;
+		}
+	}
+	&.is-active{
+		background: #19191D;
+		.scan__title{
+			opacity: 1;
+			left: 0;
+			color: #fff;
+		}
+	}
+}
