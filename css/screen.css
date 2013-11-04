@@ -184,7 +184,6 @@ a img, fieldset { border: none; }
 .vstatus.vstatus_short .vstatus__range { height: 3px; box-shadow: none; cursor: pointer; position: relative; }
 .vstatus.vstatus_short .vstatus__range:before { position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: transparent; content: ' '; }
 .vstatus.vstatus_short .vstatus__range:hover { background: #fff; }
-.vstatus.vstatus_short .vstatus__range.is-active:after { position: absolute; left: 0; right: 0; top: 3px; background: #19191D; height: 50px; z-index: 100; content: ' '; }
 .vstatus.vstatus_short .vstatus__redthing { height: 3px; }
 
 .frames { width: 100%; position: relative; margin-bottom: 3px; height: 82px; white-space: nowrap; vertical-align: top; font-size: 0; background: #3E4047; display: inline-block; width: 100%; }
@@ -261,12 +260,13 @@ a img, fieldset { border: none; }
 
 .eagle-filmstrip { height: 30px; margin: 0 -15px 1px -15px; }
 
-.scans { margin: 0 -15px; }
+.scans { margin: 0 -15px; position: relative; overflow: hidden; }
+.scans .scans__hilite { position: absolute; left: 720px; width: 147px; z-index: 1; background: #19191D; height: 100%; top: 0; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
 .scan { padding: 2px 0; border-bottom: 1px solid #101114; position: relative; overflow: hidden; }
 .scan .scan__img { height: 30px; display: block; position: relative; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
-.scan .scan__img img { opacity: .2; position: absolute; }
-.scan .scan__img .mask { opacity: 1; z-index: 1; }
+.scan .scan__img img { opacity: .2; position: absolute; z-index: 20; }
+.scan .scan__img .mask { opacity: 1; z-index: 21; }
 .scan .scan__title { position: absolute; left: 0; bottom: 0; font-size: 13px; color: #a7a8ad; display: inline-block; background: #19191B; padding: 2px 2px 2px 4px; line-height: 1; opacity: 0; left: -10px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
 .scan:hover .scan__title { opacity: 1; left: 0; }
 .scan.is-active { background: #19191D; }

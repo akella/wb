@@ -59,6 +59,18 @@
 }
 .scans{
 	margin: 0 -15px;
+	position: relative;
+	overflow: hidden;
+	.scans__hilite{
+		position: absolute;
+		left: 720px;
+		width: 267px - 120px;
+		z-index: 1;
+		background: #19191D;
+		height: 100%;
+		top: 0;
+		@include transition(all .2s ease-in-out);
+	}
 }
 .scan{
 	padding: 2px 0;
@@ -73,10 +85,11 @@
 		img{
 			opacity: .2;
 			position: absolute;
+			z-index: 20;
 		}
 		.mask{
 			opacity: 1;
-			z-index: 1;
+			z-index: 21;
 		}
 	}
 	.scan__title{
