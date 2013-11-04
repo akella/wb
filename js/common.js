@@ -28,4 +28,8 @@ $(document).ready(function() {
 		//testing events on cropped scans
 		alert($(this).data('mask'));
 	});
+	$(".scan").click(function (e) {
+		$('.scan').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
 });

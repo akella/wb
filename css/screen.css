@@ -264,12 +264,13 @@ a img, fieldset { border: none; }
 .scans { margin: 0 -15px; }
 
 .scan { padding: 2px 0; border-bottom: 1px solid #101114; position: relative; overflow: hidden; }
-.scan .scan__img { height: 30px; display: block; position: relative; }
+.scan .scan__img { height: 30px; display: block; position: relative; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .scan .scan__img img { opacity: .2; position: absolute; }
 .scan .scan__img .mask { opacity: 1; z-index: 1; }
 .scan .scan__title { position: absolute; left: 0; bottom: 0; font-size: 13px; color: #a7a8ad; display: inline-block; background: #19191B; padding: 2px 2px 2px 4px; line-height: 1; opacity: 0; left: -10px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
 .scan:hover .scan__title { opacity: 1; left: 0; }
 .scan.is-active { background: #19191D; }
 .scan.is-active .scan__title { opacity: 1; left: 0; color: #fff; }
+.scan.is-active .scan__img { left: 600px; }
 
 .vglogo { position: fixed; bottom: 20px; right: 20px; background: url('../img/icons-se4e9270ade.png') 0 0 no-repeat; width: 173px; height: 38px; }
